@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
 import static java.lang.Integer.valueOf;
 
 public class Java01 {
@@ -18,10 +19,11 @@ Java01. Eriks exam like questions.
 S1. Why is Java not considered a pure objectoriented language.
 
 + fordi der findes funktioner fra funktionel programmering i java - fx lambda expressions
++ fordi der findes primitive datatyper som ikke er objekter
 
 ------------------------------------------------------
 S2. Can a primitive have the value null ?
-+ primite datatyper kan IKKE være null
++ primitive datatyper kan IKKE være null
 
 ------------------------------------------------------
 S3. For all primitives, java has wrapper classes.
@@ -34,11 +36,9 @@ S3. For all primitives, java has wrapper classes.
 
     imTest = 6;
 
-    int i = 9;
+    System.out.println(imTest);
 
-    i++;
 
-    System.out.println(i);
 
 
 
@@ -54,7 +54,15 @@ S4.
 
 What will the above print ?
 
++ java.lang.Integer
+*/
+        List<Integer> lst = new ArrayList<>();
+        lst.add(1);
+        for (int i = 0; i < lst.size(); i++) {
+            System.out.println(lst.get(i).getClass().getName());
 
+        }
+/*
 ------------------------------------------------------
 S5.
         List<Integer> lst = new ArrayList<>();
@@ -64,20 +72,43 @@ S5.
         }
 
 What will the above print ?
++ Denne compiler ikke, da det ikke er en int men en Integer
+*/
+        int[] test = new int[5];
+        test[0] = 1;
+        test[1] = 2;
+        test[2] = 3;
+        test[3] = 4;
+        test[4] = 5;
+
+        for(int ii: test){
+            System.out.println("S5: " + ii);
+        }
+/*
 
 ------------------------------------------------------
 S6.  Write a function that converts a string to an Integer (return int).
      In 1 line of code.
+*/
+        System.out.println(convertStringToInt("2"));
+/*
+
+
 
 Now enhance that function, using exceptions,
 if the String passed to the function is not a valid Integer
 return the smallest possible Integer
 otherwise of course just return a valid integer.
+*/
+        System.out.println(convertStringToInt("921.5"));
+/*
 
 ------------------------------------------------------
 S7. What happens here ?
         Integer a = Integer.valueOf(9);
         a++;
+
++ Den laver et nyt Integer obj som den assigner til a variablen == 10
 
 ------------------------------------------------------
 S8.
@@ -87,6 +118,14 @@ S8.
         System.out.println(n1.equals(n2));
 
 What does the above print.
++ true
++ true
+*/
+        Integer n1 = 9;
+        Integer n2 = 9;
+        System.out.println(n1 == n2);
+        System.out.println(n1.equals(n2));
+/*
 
 --------------------------------------
 S9.
@@ -96,6 +135,15 @@ S9.
         System.out.println(n1.equals(n2));
 
 What does the above print.
++ False
++ True
+
+*/
+        Integer n3 = new Integer(9);
+        Integer n4 = new Integer(9);
+        System.out.println(n3 == n4);
+        System.out.println(n3.equals(n4));
+/*
 
 --------------------------------------
 S10.
@@ -105,6 +153,12 @@ S10.
 The above prints 15.
 Explain the second argument of valueOf.
 
++ radix er talsystemet,  2 == binær
+
+*/
+        Integer i2 = Integer.valueOf("1111", 2);
+        System.out.println(i2);
+/*
 --------------------------------------
 S11.
         int big = 255;
@@ -314,30 +368,26 @@ public final class MyStaticClass {
 
 
 
-        s5();
-
-
-
-
-
 
     }
 
-
-
-    public static void s5(){
-
-        List<Integer> lst = new ArrayList<>();
-
-        lst.add(1);
-
-        for (Integer ii: lst) {
-
-            System.out.println(ii.getClass().getName());
-
+    //S6
+    /*
+    Now enhance that function, using exceptions,
+    if the String passed to the function is not a valid Integer
+    return the smallest possible Integer
+    otherwise of course just return a valid integer.
+     */
+    public static int convertStringToInt(String str){
+        try{
+            return Integer.parseInt(str);
+        } catch(NumberFormatException e){
+            return 0;
         }
 
     }
+
+
 
 
 
