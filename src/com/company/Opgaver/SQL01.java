@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Opgaver;
 //  Eriks exam like questions. SQL.
 public class SQL01 {
 /*

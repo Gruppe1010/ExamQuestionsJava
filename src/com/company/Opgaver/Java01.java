@@ -1,4 +1,8 @@
-package com.company;
+package com.company.Opgaver;
+
+import com.company.Car;
+import com.company.Student;
+import com.company.Volvo;
 
 import java.util.ArrayList;
 import java.util.List;
