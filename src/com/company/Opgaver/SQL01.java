@@ -32,6 +32,8 @@ create a table that defines which students are related to which classes.
 S6. Inspired by S5, create a sql statement that shows all students in a certain class.
 
 + SELECT distinct s.id_student, student_name FROM student s JOIN student_classes sc ON s.id_student WHERE id_classes = 1;
+
++ ERIKS LØSNING: SELECT * FROM classes JOIN student_classes USING (id_classes);
 -------------------------------------------------
 S7. Write one line of sql code that adds a varchar column to a table.
     and the column should not allow Null values, and default value should be 'x'
@@ -60,18 +62,24 @@ S12. Write sql that removes the above table.
 -------------------------------------------------
 S13. What is an index in a table
 
++ Noget der kan gøre SELECT hurtigere ved at samle kolonner under et fælles navn
 -------------------------------------------------
 S14. What kind of a datastructure is used to store an index ?
 
++ B-tree altså binary
 -------------------------------------------------
 S15. Mention the 5 easiest keywords to explain in sql, used in an aggregate function.
 
++ SUM, MAX, MIN, AVG, COUNT (Returnerer antal rows)
++
 -------------------------------------------------
 S16. What does an aggregate function do.
 
++ Regner noget ud
 -------------------------------------------------
 S17. What two kind of concepts in sql do you often use aggregate functions.
 
++
 -------------------------------------------------
 
 
