@@ -74,7 +74,10 @@ S14. What kind of a datastructure is used to store an index ?
 S15. Mention the 5 easiest keywords to explain in sql, used in an aggregate function.
 
 + SUM, MAX, MIN, AVG, COUNT (Returnerer antal rows)
-+
++ SELECT SUM(col1 + col2) FROM table1;
++ SELECT MAX(col1) FROM table1;
++ SELECT MIN(col1) FROM table1;
++ SELECT AVG(col1) FROM table1;
 -------------------------------------------------
 S16. What does an aggregate function do.
 
@@ -82,12 +85,8 @@ S16. What does an aggregate function do.
 -------------------------------------------------
 S17. What two kind of concepts in sql do you often use aggregate functions.
 
-+
++ I en subselect eller en group by
++ SUBSELECT EXAMPLE: SELECT * FROM student WHERE id_student = (SELECT max(id_student) FROM student);
 -------------------------------------------------
-
-
-     */
-
-
-
+*/
 }
