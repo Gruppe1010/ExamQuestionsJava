@@ -16,8 +16,8 @@ S3. What are the 2 major types of commands in sql ?
 + INSERT INTO
 -------------------------------------------------
 S4. What sql could be used to copy all data from one table into another table.
-
-
++ INSERT INTO table2
++ SELECT * FROM table1
 -------------------------------------------------
 S5. You have 2 tables.
   classes which contain all classes that KEA supports for datamatiker.
