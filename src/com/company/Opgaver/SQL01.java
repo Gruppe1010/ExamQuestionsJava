@@ -31,7 +31,7 @@ create a table that defines which students are related to which classes.
 -------------------------------------------------
 S6. Inspired by S5, create a sql statement that shows all students in a certain class.
 
-+ SELECT * FROM classes JOIN student_classes ON id_student WHERE classes = "Programmering";
++ SELECT distinct s.id_student, student_name FROM student s JOIN student_classes sc ON s.id_student WHERE id_classes = 1;
 -------------------------------------------------
 S7. Write one line of sql code that adds a varchar column to a table.
     and the column should not allow Null values, and default value should be 'x'
@@ -44,18 +44,19 @@ S8. Write a line of sql code that creates a new database.
 -------------------------------------------------
 S9. Write a line of sql code that removes the above database.
 
-+ DROP IF EXIST DATABASE newdb;
++ DROP DATABASE IF EXIST newdb;
 -------------------------------------------------
 S10. Write the shortest possible line of sql that creates a new table.
 
-+ CREATE TABLE newtable(preben VARCHAR(255));
++ CREATE TABLE newtable(col1 VARCHAR(255));
 -------------------------------------------------
 S11. Write the shortest possible line of sql that creates a new table with a primary key.
 
-+ CREATE TABLE newtable1(bent INT NOT NULL, PRIMARY KEY(`bent`));
++ CREATE TABLE newtable1(col1 INT NOT NULL, PRIMARY KEY(`bent`));
 -------------------------------------------------
 S12. Write sql that removes the above table.
 
++ DROP TABLE IF EXISTS newtable;
 -------------------------------------------------
 S13. What is an index in a table
 
