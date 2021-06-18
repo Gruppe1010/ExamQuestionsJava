@@ -26,6 +26,7 @@ S5. You have 2 tables.
 
 create a table that defines which students are related to which classes.
 
+
 -------------------------------------------------
 S6. Inspired by S5, create a sql statement that shows all students in a certain class.
 
