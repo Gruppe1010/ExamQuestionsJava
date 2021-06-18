@@ -43,6 +43,8 @@ S8. Write a line of sql code that creates a new database.
 + CREATE DATABASE newdb;
 -------------------------------------------------
 S9. Write a line of sql code that removes the above database.
+! Syntax for DROP: DROP OBJECT_TYPE [ IF EXISTS ] OBJECT_NAME
+
 
 + DROP DATABASE IF EXIST newdb;
 -------------------------------------------------

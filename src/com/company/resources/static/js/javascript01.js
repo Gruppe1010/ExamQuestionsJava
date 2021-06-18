@@ -34,7 +34,8 @@ out(4>"12");
 out("4">"12");
 */
 
-out(4 == "4"); // + true
+out(4 == "4"); // + true fordi
+// ! dette hedder type coercion
 out(4 > "12"); // + false
 out("4" > "12"); // + true
 out(true == 1); // + true
